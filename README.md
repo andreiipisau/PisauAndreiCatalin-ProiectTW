@@ -18,22 +18,19 @@ Sample data used across all stages:
 ## AI usage
 | Tool | Used for |
 | --- | --- |
-| Gemini | Generarea structurii HTML, CSS și a fișierului README conform temei SwiftFixIT. |
+| Gemini | Generarea structurii HTML, CSS, JS și a documentației conform temei SwiftFixIT. |
 
 Details per stage:
 * Stage 1: Generarea codului HTML, CSS și a jurnalului AI. Vezi folderul ai-log/.
+* Stage 2: Generarea codului JavaScript cu logică imutabilă (tichete.js) și teste în consolă. Vezi folderul ai-log/.
 
 ## How to run
 Open `index.html` in a browser. No build step, no server.
 
-## Status
-- [x] Stage 1: static mockup
-- [ ] Stage 2: data logic in JavaScript
-
 ## Stage 2: data logic
-Plain JavaScript, no DOM. tichete.js holds the array and the functions that read and change it. Results are printed in the browser console (F12).
+Plain JavaScript, no DOM. `tichete.js` holds the array and the functions that read and change it. Results are printed in the browser console (F12).
 
-## Status (Actualizat)
+## Status
 - [x] Stage 1: static mockup
 - [x] Stage 2: data logic in JavaScript
 - [ ] Stage 3: Vite and React project
