@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SwiftFixIT - Mockup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>SwiftFixIT</h1>
+    <p>Platformă online pentru gestionarea tichetelor de mentenanță și reparații IT.</p>
+    <p class="app-count">3 tichete, dintre care 2 active</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Adaugă tichet</h2>
+      <form class="item-form">
+        <label>Problemă / Echipament 
+          <input type="text" name="titlu" placeholder="Ex: Înlocuire display laptop" />
+        </label>
+        <label>Tip serviciu
+          <select name="eticheta">
+            <option value="hardware">Hardware</option>
+            <option value="software">Software</option>
+            <option value="retea">Rețea</option>
+          </select>
+        </label>
+        <button type="submit">Adaugă</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Tichetele mele</h2>
+      <!-- <p class="empty">Nu există niciun tichet.</p> -->
+      <ul class="item-list">
+        <li class="item-card">
+          <div>
+            <h3>Înlocuire display laptop Dell</h3>
+            <span class="badge badge-hardware">Hardware</span>
+          </div>
+          <span class="status">Deschis</span>
+        </li>
+        <li class="item-card done">
+          <div>
+            <h3>Instalare Windows 11</h3>
+            <span class="badge badge-software">Software</span>
+          </div>
+          <span class="status">Rezolvat</span>
+        </li>
+        <li class="item-card">
+          <div>
+            <h3>Configurare router Wi-Fi</h3>
+            <span class="badge badge-retea">Rețea</span>
+          </div>
+          <span class="status">Deschis</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    Proiect Tehnologii Web - SwiftFixIT
+  </footer>
+</body>
+</html>
