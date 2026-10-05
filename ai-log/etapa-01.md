@@ -4,8 +4,7 @@
 - Gemini (Google)
 
 ## Conversations
-- Link conversație: (Introdu aici link-ul generat folosind butonul de Share al conversației noastre curente, dacă platforma îți permite) (Mockup HTML și CSS pentru aplicația SwiftFixIT)
-
+- Link conversație: https://share.gemini.google/nH5uzFp6PCMN
 ## Key requests
 
 ### 1. Generarea codului pentru mockup
