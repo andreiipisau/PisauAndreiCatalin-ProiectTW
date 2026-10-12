@@ -1,0 +1,11 @@
+
+.container {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: grid;
+  /* Etapa 3: doar panoul cu date */
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
