@@ -1,0 +1,9 @@
+{
+  "tichete": [
+    { "id": 1, "titlu": "Înlocuire display laptop Dell", "eticheta": "hardware", "rezolvat": false },
+    { "id": 2, "titlu": "Instalare Windows 11", "eticheta": "software", "rezolvat": true },
+    { "id": 3, "titlu": "Configurare router Wi-Fi", "eticheta": "retea", "rezolvat": false },
+    { "id": 4, "titlu": "Upgrade memorie RAM", "eticheta": "hardware", "rezolvat": true },
+    { "id": 5, "titlu": "Devirusare sistem", "eticheta": "software", "rezolvat": false }
+  ]
+}

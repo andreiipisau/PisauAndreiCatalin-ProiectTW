@@ -210,3 +210,12 @@ body {
   --accent-soft: #0f172a;
   --header-bg: #000000;
 }
+
+.info { color: var(--muted); }
+.error {
+  color: var(--mare);
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
