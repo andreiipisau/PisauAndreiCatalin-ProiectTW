@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f0f4f8;
+  --card: #ffffff;
+  --text: #102a43;
+  --muted: #627d98;
+  --border: #d9e2ec;
+  --accent: #0070f3;
+  --accent-dark: #0353a4;
+  --accent-soft: #e0f2fe;
+  --error-bg: #ffe3e3;
+  --error-border: #ffb8b8;
+  --mare: #e03131;
+  --medie: #d97706;
+  --mica: #059669;
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1120;
+    --card: #1e293b;
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --border: #334155;
+    --accent: #38bdf8;
+    --accent-dark: #0284c7;
+    --accent-soft: #164e63;
+    --error-bg: #4c1d95;
+    --error-border: #7c3aed;
+    --mare: #f87171;
+    --medie: #fbbf24;
+    --mica: #34d399;
+    --shadow: none;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b1120;
+  --card: #1e293b;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #334155;
+  --accent: #38bdf8;
+  --accent-dark: #0284c7;
+  --accent-soft: #164e63;
+  --error-bg: #4c1d95;
+  --error-border: #7c3aed;
+  --mare: #f87171;
+  --medie: #fbbf24;
+  --mica: #34d399;
+  --shadow: none;
+}
+
+:root[data-theme="light"] {
+  --bg: #f0f4f8;
+  --card: #ffffff;
+  --text: #102a43;
+  --muted: #627d98;
+  --border: #d9e2ec;
+  --accent: #0070f3;
+  --accent-dark: #0353a4;
+  --accent-soft: #e0f2fe;
+  --error-bg: #ffe3e3;
+  --error-border: #ffb8b8;
+  --mare: #e03131;
+  --medie: #d97706;
+  --mica: #059669;
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.info {
+  color: var(--muted);
+}
+
+.empty {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.error {
+  color: var(--mare);
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--accent-dark);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  border: 1px solid var(--mare);
+  background: transparent;
+  color: var(--mare);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background: var(--mare);
+  color: #fff;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.badge-hardware {
+  background: var(--mare);
+}
+
+.badge-software {
+  background: var(--medie);
+}
+
+.badge-retea {
+  background: var(--mica);
+}

@@ -1,10 +1,6 @@
 import { useState } from "react";
-
-const ETICHETE = [
-  { value: "hardware", label: "Hardware" },
-  { value: "software", label: "Software" },
-  { value: "retea", label: "Rețea" },
-];
+import { ETICHETE } from "../constants.js";
+import styles from "./TichetForm.module.css";
 
 const TITLU_MAX = 100;
 
@@ -43,7 +39,7 @@ export default function TichetForm({ onAdd }) {
   }
 
   return (
-    <form className="item-form task-form" onSubmit={handleSubmit} noValidate data-testid="form">
+    <form className={styles.form} onSubmit={handleSubmit} noValidate data-testid="form">
       <label>
         Titlu
         <input
@@ -78,7 +74,7 @@ export default function TichetForm({ onAdd }) {
         </p>
       )}
 
-      <button type="submit" disabled={trimite} data-testid="form-submit">
+      <button type="submit" className="btn" disabled={trimite} data-testid="form-submit">
         {trimite ? "Se salvează..." : "Adaugă"}
       </button>
     </form>

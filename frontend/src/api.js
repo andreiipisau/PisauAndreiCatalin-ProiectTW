@@ -15,6 +15,10 @@ export function fetchTichete() {
   return request("/tichete");
 }
 
+export function fetchTichet(id) {
+  return request(`/tichete/${id}`);
+}
+
 export function createTichet(tichet) {
   return request("/tichete", { method: "POST", body: JSON.stringify(tichet) });
 }

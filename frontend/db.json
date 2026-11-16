@@ -23,6 +23,18 @@
       "titlu": "Devirusare sistem",
       "eticheta": "software",
       "rezolvat": false
+    },
+    {
+      "titlu": "asasss",
+      "eticheta": "hardware",
+      "rezolvat": false,
+      "id": 6
+    },
+    {
+      "titlu": "sdddddddddds",
+      "eticheta": "retea",
+      "rezolvat": false,
+      "id": 7
     }
   ]
 }
