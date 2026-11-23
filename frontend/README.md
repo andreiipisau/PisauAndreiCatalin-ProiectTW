@@ -1,16 +1,43 @@
-# React + Vite
+# SwiftFixIT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Platformă online pentru gestionarea tichetelor de mentenanță și reparații IT.
 
-Currently, two official plugins are available:
+## Data model
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Field | Type | Notes |
+|---|---|---|
+| Problemă / Echipament (`titlu`) | text | required, max 100 chars |
+| Rezolvat (`rezolvat`) | boolean | toggled from the list, default false |
+| Tip serviciu (`eticheta`) | fixed values | hardware, software, retea |
+| Categorie Echipament | relation | PC, Laptop, Server, Periferice |
+| Client | relation | the owner of the ticket (from week 11) |
 
-## React Compiler
+Sample data used across all stages:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Înlocuire display laptop Dell — activ (Deschis), hardware
+2. Instalare Windows 11 — finalizat (Rezolvat), software
+3. Configurare router Wi-Fi — activ (Deschis), retea
 
-## Expanding the ESLint configuration
+## AI usage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Tool | Used for |
+|---|---|
+| Gemini / ChatGPT | Generarea și adaptarea codului HTML, CSS, JavaScript, React, Node.js/Express și a documentației conform temei SwiftFixIT. |
+
+Details per stage:
+
+- Stage 1: Generarea codului HTML, CSS și a jurnalului AI. Vezi folderul `ai-log/`.
+- Stage 2: Generarea codului JavaScript cu logică imutabilă (`tichete.js`) și teste în consolă. Vezi folderul `ai-log/`.
+- Stage 3: Inițializarea proiectului React cu Vite, reutilizarea stilurilor din Stage 1 și integrarea datelor din Stage 2 în componenta principală. Vezi folderul `ai-log/`.
+- Stage 4: Extragerea interfeței în componente React (`TichetCard`, `TichetList`) și randarea dinamică a datelor. Vezi folderul `ai-log/`.
+- Stage 5: Implementarea state-ului local în React (`useState`), funcții imutabile pentru comutare/ștergere și buton de Dark/Light mode. Vezi folderul `ai-log/`.
+- Stage 6: Mutarea datelor în `db.json` cu `json-server`, încărcarea prin `fetch` și `useEffect`, tratarea stărilor de loading și eroare. Vezi folderul `ai-log/`.
+- Stage 7: Adăugarea formularului controlat cu validare (`TichetForm`), salvarea operațiilor CRUD (`POST`, `PATCH`, `DELETE`) în API și configurarea `tw.json` + `data-testid`. Vezi folderul `ai-log/`.
+- Stage 8: Adăugarea rutării cu React Router (`Layout`, `TichetePage`, `TichetDetaliuPage`, `DesprePage`, `NotFoundPage`) și mutarea stilurilor în CSS Modules (`.module.css`). Vezi folderul `ai-log/`.
+- Stage 9: Înlocuirea `json-server` cu un backend propriu în Node.js și Express (`backend/`), validare pe server, coduri HTTP REST și configurare CORS. Vezi folderul `ai-log/`.
+
+## How to run
+
+```bash
+cd backend && npm install && npm run dev
+cd frontend && npm install && npm run dev
